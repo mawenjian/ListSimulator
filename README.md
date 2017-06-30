@@ -1,12 +1,10 @@
 # ListSimulator
 
-----------------------------------------
-`ListSimulator`是一个基于_Java_的列表（_List_）模拟数据生成工具，主要用于在书写测试代码时，按照自定义规则生成一系列具有特定规律的自定义数据。
+`ListSimulator`是一个基于 _Java_ 的列表（_List_）模拟数据生成工具，主要用于在书写测试代码时，按照自定义规则生成一系列具有特定规律的自定义数据。
 
-##程序演示
+## 程序演示
 
-----------------------------------------
-###1. 一个综合例子
+### 1. 一个综合例子
 
 <pre><code>
     ListSimulator<DemoBean> listSimulator = new ListSimulator.Builder<DemoBean>(DemoBean.class)
@@ -38,7 +36,7 @@
 	System.out.println(JSON.toJSONString(list4));
 </code></pre>
 
-###2. 使用顺序化生成器
+### 2. 使用顺序化生成器
 
 <pre><code>
     ListSimulator<DemoBean> listSimulator = new ListSimulator.Builder<DemoBean>(DemoBean.class)
@@ -67,7 +65,7 @@
 	System.out.println(JSON.toJSONString(list4));
 </code></pre>
 
-###3. 使用随机化生成器
+### 3. 使用随机化生成器
 
 <pre><code>
     ListSimulator<DemoBean> listSimulator = new ListSimulator.Builder<DemoBean>(DemoBean.class)
@@ -89,7 +87,7 @@
 	System.out.println(JSON.toJSONString(list3));
 </code></pre>
 
-###4. 使用常量（固定值）生成器
+### 4. 使用常量（固定值）生成器
 
 <pre><code>
     Object[][] params = {{"a2", false}, {"c2", (short)2}};
@@ -125,7 +123,7 @@
 	System.out.println(JSON.toJSONString(list3));
 </code></pre>
 
-###5. 自定义生成器
+### 5. 自定义生成器
 
 <pre><code>
     ListSimulator<DemoBean> listSimulator = new ListSimulator.Builder<DemoBean>(DemoBean.class)
@@ -201,14 +199,12 @@ public class DemoInnerBean {
 }
 </code></pre>
 
-##支持的数据类型
+## 支持的数据类型
 
-----------------------------------------
 ListSimulator提供了对Java基本数据类型（`boolean`、`byte`、`short`、`int`、`long`、`float`、`double`、`char`）及`String`、`BigDecimal`、`Date`等常用数据类型的支持。
 
-##内置数据生成器类型
+## 内置数据生成器类型
 
-----------------------------------------
 * `NextValIface<T>`：所有内置数据生成器的数据接口；
     
 * `ConstantNextVal<T>`：生成具有固定值的常量；
@@ -221,12 +217,10 @@ ListSimulator提供了对Java基本数据类型（`boolean`、`byte`、`short`�
 
 ## 可扩展
 
-----------------------------------------
 其余数据类型及特定的用户需求支持通过实现`NextValIface<T>`接口自行实现。
 
-##联系方式
+## 联系方式
 
-----------------------------------------
 * 邮箱：mawenjian#gmail.com
 
 * 博客：[http://mawenjian.net/](http://mawenjian.net "马文建的博客")
