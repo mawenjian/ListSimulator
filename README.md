@@ -9,10 +9,10 @@
 <pre><code>
     ListSimulator&lt;DemoBean&gt; listSimulator = new ListSimulator.Builder&lt;DemoBean&gt;(DemoBean.class)
     		.applySerialVal("d1")	//顺序化生成值（从1开始）
-    		.applyConstantVal("d2", 100)	//生成固定值100
+    		.applyConstantVal("d2", 100)	//生成固定值
     		.applyRandomVal("i")	//生成随机值
     		.applySerialStringVal("i2", "i2-{0}")	//顺序化生成字符串，数字部分不固定长度
-    		.applySerialStringVal("i3", "i3-{0}", 10)	//顺序化生成字符串，数字部分不固定长度
+    		.applySerialStringVal("i3", "i3-{0}", 10)	//顺序化生成字符串，数字部分固定长度
     		.applyNextVal("innerBean", testDiyNextValIface)	//使用自定义的生成器生成值
 		.build();
 	
