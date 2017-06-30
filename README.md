@@ -187,7 +187,7 @@
 }
 </code></pre>
 
-`innerBean`的类型如下：
+`DemoInnerBean`类的定义如下：
 
 <pre><code>
 public class DemoInnerBean {
@@ -201,7 +201,7 @@ public class DemoInnerBean {
 
 ## 支持的数据类型
 
-ListSimulator提供了对Java基本数据类型（`boolean`、`byte`、`short`、`int`、`long`、`float`、`double`、`char`）及`String`、`BigDecimal`、`Date`等常用数据类型的支持。
+_ListSimulator_ 提供了对 _Java_ 基本数据类型（`boolean`、`byte`、`short`、`int`、`long`、`float`、`double`、`char`）及`String`、`BigDecimal`、`Date`等常用数据类型的支持。
 
 ## 内置数据生成器类型
 
@@ -209,7 +209,7 @@ ListSimulator提供了对Java基本数据类型（`boolean`、`byte`、`short`�
     
 * `ConstantNextVal<T>`：生成具有固定值的常量；
     
-* `NullNextVal`：生成_NULL_值；
+* `NullNextVal`：生成 _NULL_ 值；
     
 * `RandomNextVal`：生成随机数/值；
     
