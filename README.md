@@ -205,15 +205,15 @@ _ListSimulator_ 提供了对 _Java_ 基本数据类型（`boolean`、`byte`、`s
 
 ## 内置数据生成器类型
 
-* `NextValIface<T>`：所有内置数据生成器的数据接口；
+* `NextValIface<T>` ：所有内置数据生成器的数据接口；
     
-* `ConstantNextVal<T>`：生成具有固定值的常量；
+* `ConstantNextVal<T>` ：生成具有固定值的常量；
     
-* `NullNextVal`：生成 _NULL_ 值；
+* `NullNextVal` ：生成 _NULL_ 值；
     
-* `RandomNextVal`：生成随机数/值；
+* `RandomNextVal` ：生成随机数/值；
     
-* `SerialNextVal`：生成顺序化的数/值；
+* `SerialNextVal` ：生成顺序化的数/值；
 
 ## 可扩展
 
