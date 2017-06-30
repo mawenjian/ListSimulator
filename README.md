@@ -7,7 +7,7 @@
 ### 1. 一个综合例子
 
 <pre><code>
-    ListSimulator<DemoBean> listSimulator = new ListSimulator.Builder<DemoBean>(DemoBean.class)
+    ListSimulator&lt;DemoBean&gt; listSimulator = new ListSimulator.Builder&lt;DemoBean&gt;(DemoBean.class)
     		.applySerialVal("d1")	//顺序化生成值（从1开始）
     		.applyConstantVal("d2", 100)	//生成固定值100
     		.applyRandomVal("i")	//生成随机值
@@ -16,10 +16,10 @@
     		.applyNextVal("innerBean", testDiyNextValIface)	//使用自定义的生成器生成值
 		.build();
 	
-	List<DemoBean> list1 = new ArrayList<DemoBean>();
-	List<DemoBean> list2 = new ArrayList<DemoBean>();
-	List<DemoBean> list3 = new ArrayList<DemoBean>();
-	List<DemoBean> list4 = new ArrayList<DemoBean>();
+	List&lt;DemoBean&gt; list1 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list2 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list3 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list4 = new ArrayList&lt;DemoBean&gt;();
 	
 	//生成多个完全一样的对象
 	listSimulator.generate(10, list1, list2);
@@ -39,7 +39,7 @@
 ### 2. 使用顺序化生成器
 
 <pre><code>
-    ListSimulator<DemoBean> listSimulator = new ListSimulator.Builder<DemoBean>(DemoBean.class)
+    ListSimulator&lt;DemoBean&gt; listSimulator = new ListSimulator.Builder&lt;DemoBean&gt;(DemoBean.class)
     		.applySerialVal("a1")
     		.applySerialVal("a2")
     		.applySerialVal("b1", "b2", "c1", "c2", "d1", "d2", "e1", "e2", "f1", "f2", "g1", "g2", "h1", "h2", "i", "j", "k")
@@ -47,10 +47,10 @@
     		.applySerialStringVal("i3", "i3-{0}", 10)
     		.build();
 
-	List<DemoBean> list1 = new ArrayList<DemoBean>();
-	List<DemoBean> list2 = new ArrayList<DemoBean>();
-	List<DemoBean> list3 = new ArrayList<DemoBean>();
-	List<DemoBean> list4 = new ArrayList<DemoBean>();
+	List&lt;DemoBean&gt; list1 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list2 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list3 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list4 = new ArrayList&lt;DemoBean&gt;();
 	
 	//生成多个完全一样的对象
 	listSimulator.generate(10, list1, list2);
@@ -68,14 +68,14 @@
 ### 3. 使用随机化生成器
 
 <pre><code>
-    ListSimulator<DemoBean> listSimulator = new ListSimulator.Builder<DemoBean>(DemoBean.class)
+    ListSimulator&lt;DemoBean&gt; listSimulator = new ListSimulator.Builder&lt;DemoBean&gt;(DemoBean.class)
         	.applyRandomVal("a1").applyRandomVal("a2")
         	.applyRandomVal("b1", "b2", "c1", "c2", "d1", "d2", "e1", "e2", "f1", "f2", "g1", "g2", "h1", "h2", "i", "i2", "i3", "j", "k")
         	.build();
     
-	List<DemoBean> list1 = new ArrayList<DemoBean>();
-	List<DemoBean> list2 = new ArrayList<DemoBean>();
-	List<DemoBean> list3 = new ArrayList<DemoBean>();
+	List&lt;DemoBean&gt; list1 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list2 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list3 = new ArrayList&lt;DemoBean&gt;();
 	
 	//生成多个完全一样的对象
 	listSimulator.generate(10, list1, list2);
@@ -91,7 +91,7 @@
 
 <pre><code>
     Object[][] params = {{"a2", false}, {"c2", (short)2}};
-		ListSimulator<DemoBean> listSimulator = new ListSimulator.Builder<DemoBean>(DemoBean.class)
+		ListSimulator&lt;DemoBean&gt; listSimulator = new ListSimulator.Builder&lt;DemoBean&gt;(DemoBean.class)
 			.applyConstantVal("a1", true)
 			.applyConstantVal("b1", (byte)1)
 			.applyConstantVal("c1", (short)2)
@@ -109,9 +109,9 @@
 			.applyConstantVal(params)
 			.build();
 			
-	List<DemoBean> list1 = new ArrayList<DemoBean>();
-	List<DemoBean> list2 = new ArrayList<DemoBean>();
-	List<DemoBean> list3 = new ArrayList<DemoBean>();
+	List&lt;DemoBean&gt; list1 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list2 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list3 = new ArrayList&lt;DemoBean&gt;();
 	
 	//生成多个完全一样的对象
 	listSimulator.generate(10, list1, list2);
@@ -126,13 +126,13 @@
 ### 5. 自定义生成器
 
 <pre><code>
-    ListSimulator<DemoBean> listSimulator = new ListSimulator.Builder<DemoBean>(DemoBean.class)
+    ListSimulator&lt;DemoBean&gt; listSimulator = new ListSimulator.Builder&lt;DemoBean&gt;(DemoBean.class)
 			.applyNextVal("innerBean", testDiyNextValIface)
 			.build();
 			
-	List<DemoBean> list1 = new ArrayList<DemoBean>();
-	List<DemoBean> list2 = new ArrayList<DemoBean>();
-	List<DemoBean> list3 = new ArrayList<DemoBean>();
+	List&lt;DemoBean&gt; list1 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list2 = new ArrayList&lt;DemoBean&gt;();
+	List&lt;DemoBean&gt; list3 = new ArrayList&lt;DemoBean&gt;();
 	
 	//生成多个完全一样的对象
 	listSimulator.generate(10, list1, list2);
@@ -147,7 +147,7 @@
 其中，`testDiyNextValIface`的定义如下：
 
 <pre><code>
-    NextValIface<DemoInnerBean> testDiyNextValIface = new NextValIface<DemoInnerBean>() {
+    NextValIface&lt;DemoInnerBean&gt; testDiyNextValIface = new NextValIface&lt;DemoInnerBean&gt;() {
 
 	private int counter;
 	private SerialStringNextVal nextSerialNmIface;
