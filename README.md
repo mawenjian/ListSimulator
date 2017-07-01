@@ -217,7 +217,7 @@ _ListSimulator_ 提供了对 _Java_ 基本数据类型（`boolean`、`byte`、`s
 
 ## 可扩展
 
-其余数据类型及特定的用户需求支持通过实现`NextValIface<T>`接口自行实现。
+其余数据类型及特定的用户需求可通过实现`NextValIface<T>`接口进行扩展。
 
 ## 联系方式
 
